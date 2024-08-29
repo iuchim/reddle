@@ -16,7 +16,7 @@ export const clearMessagesAtom = atom(null, (_get, set) => {
 })
 export const addMessagesAtom = atom(null, (_get, set, msg: Msg) => {
   msg.id ??= nanoid()
-  set(baseMessagesAtom, (log) => ([...log, msg]))
+  set(baseMessagesAtom, (log) => [...log, msg])
 })
 
 export const newGameAtom = atom(null, (_get, set) => {
